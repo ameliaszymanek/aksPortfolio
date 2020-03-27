@@ -3,14 +3,14 @@
   font-family: "Open Sans";
   --text-primary: #b6b6b6;
   --text-secondary: #ececec;
-  --bg-primary: #23232e;
-  --bg-secondary: #141418;
+  --bg-primary: #f5f1ee;
+  --bg-secondary: #21313b;
   --transition-speed: 600ms;
 }
 
 body {
   color: black;
-  background-color: white;
+  background-color: #a1b9b8;
   margin: 0;
   padding: 0;
 }
@@ -20,11 +20,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: #f5f1ee;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: #8e5b63;
 }
 
 main {
@@ -51,7 +51,7 @@ main {
 }
 
 .nav-item {
-  width: 100%;
+  align-items: center;
 }
 
 .nav-item:last-child {
@@ -72,6 +72,24 @@ main {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
+  padding: 2em;
+}
+
+.special {
+  /* display: flex; */
+  align-items: center;
+  height: 5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.special:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0;
 }
 
 .link-text {
@@ -86,11 +104,11 @@ main {
 }
 
 .fa-primary {
-  color: #ff7eee;
+  color: #d4b99f;
 }
 
 .fa-secondary {
-  color: #df49a6;
+  color: #c3934c;
 }
 
 .fa-primary,
@@ -110,10 +128,10 @@ main {
   width: 100%;
 }
 
-.logo svg {
+/* .logo svg {
   transform: rotate(0deg);
   transition: transform var(--transition-speed);
-}
+} */
 
 .logo-text {
   display: inline;
@@ -122,7 +140,7 @@ main {
   transition: var(--transition-speed);
 }
 
-.navbar:hover .logo svg {
+.navbar:hover .special {
   transform: rotate(-180deg);
 }
 
@@ -136,6 +154,22 @@ main {
 
   .logo {
     display: none;
+  }
+
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .nav-item {
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
   .navbar-nav {
